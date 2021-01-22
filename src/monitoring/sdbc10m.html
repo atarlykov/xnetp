@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<html lang="en">
+<head>
+    <title>NetData Dashboard</title>
+    <meta name="application-name" content="netdata">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<script type="text/javascript" src="dashboard.js?v20170724-1"></script>
+<body>
+
+<div style="width: 100%; text-align: center;">
+
+    <div style="width:96%; margin:auto;">
+
+        <div style="height:10px;"></div>
+
+        <div>
+            <div data-netdata="disk.sdb"
+                 data-append-options="absolute"
+                 data-dimensions="writes"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+                 data-dygraph-strokeWidth="1.5"
+                 data-dygraph-type="line"
+            ></div>
+            <div data-netdata="disk.sdc"
+                 data-append-options="absolute"
+                 data-dimensions="writes"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+                 data-dygraph-strokeWidth="1.5"
+                 data-dygraph-type="line"
+            ></div>
+        </div>
+
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="disk_ops.sdb"
+                 data-chart-library="dygraph"
+                 data-append-options="absolute"
+                 data-dimensions="writes"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+            <div data-netdata="disk_ops.sdc"
+                 data-chart-library="dygraph"
+                 data-append-options="absolute"
+                 data-dimensions="writes"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+        </div>
+
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="disk_qops.sdb"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+            <div data-netdata="disk_qops.sdc"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+        </div>
+
+
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="disk_backlog.sdb"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+            <div data-netdata="disk_backlog.sdc"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+        </div>
+
+
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="disk_util.sdb"
+                 data-chart-library="dygraph"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+            <div data-netdata="disk_util.sdc"
+                 data-chart-library="dygraph"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+        </div>
+
+
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="disk_iotime.sdb"
+                 data-append-options="absolute"
+                 data-dimensions="writes"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+            <div data-netdata="disk_iotime.sdc"
+                 data-append-options="absolute"
+                 data-dimensions="writes"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+        </div>
+
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="disk_await.sdb"
+                 data-append-options="absolute"
+                 data-dimensions="writes"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+            <div data-netdata="disk_await.sdc"
+                 data-append-options="absolute"
+                 data-dimensions="writes"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+        </div>
+
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="disk_avgsz.sdb"
+                 data-append-options="absolute"
+                 data-dimensions="writes"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+
+                 data-dygraph-strokeWidth="1.5"
+                 data-dygraph-type="line"
+            ></div>
+            <div data-netdata="disk_avgsz.sdc"
+                 data-append-options="absolute"
+                 data-dimensions="writes"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+
+                 data-dygraph-strokeWidth="1.5"
+                 data-dygraph-type="line"
+            ></div>
+        </div>
+
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="disk_svctm.sdb"
+                 data-chart-library="dygraph"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+            <div data-netdata="disk_svctm.sdc"
+                 data-chart-library="dygraph"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+        </div>
+
+
+
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="disk_mops.sdb"
+                 data-append-options="absolute"
+                 data-dimensions="writes"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+            <div data-netdata="disk_mops.sdc"
+                 data-append-options="absolute"
+                 data-dimensions="writes"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-width="450px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 data-legend="no"
+            ></div>
+        </div>
+
+
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="mem.writeback"
+                 data-chart-library="dygraph"
+                 data-width="1040px"
+                 data-height="100px"
+                 data-after="-600"
+                 data-before="0"
+                 style="margin-left: 140px;"
+            ></div>
+        </div>
+
+
+
+    </div>
+</div>
+</body>
+</html>

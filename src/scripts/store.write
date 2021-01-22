@@ -1,0 +1,4 @@
+# updates nodes' data regions
+source ./parameters
+java $jparameters xnetp.poc.disk.DataFileWriter $@
+ 

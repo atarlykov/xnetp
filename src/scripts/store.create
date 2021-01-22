@@ -1,0 +1,4 @@
+source ./parameters
+java $jparameters xnetp.poc.disk.GenerateFileTree $@
+
+ 

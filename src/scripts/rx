@@ -1,0 +1,3 @@
+
+source ./parameters
+java $jparameters xnetp.poc.net.PacketReceiver $@

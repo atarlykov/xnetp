@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<html lang="en">
+<head>
+    <title>NetData Dashboard</title>
+    <meta name="application-name" content="netdata">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<script type="text/javascript" src="dashboard.js?v20170724-1"></script>
+<body>
+
+<div style="width: 100%; text-align: center;">
+
+    <div style="width:96%; margin:auto;">
+
+        <div>
+            <div data-netdata="net_packets.enp3s0f0"
+                 data-dimensions="received"
+                 data-append-options="absolute"
+                 data-chart-library="dygraph"
+                 data-width="450px"
+                 data-height="150px"
+                 data-after="-300"
+                 data-before="0"
+                 data-legend="no"
+
+                 data-colors="#3366CC"
+                 data-dygraph-strokeWidth="1.5"
+                 data-dygraph-type="line"
+            >
+                <!--
+                     data-dygraph-type="area | line"
+                     data-append-options:
+                        absolute to show all values are absolute (i.e. turn negative dimensions to positive)
+                        percentage to express the values as a percentage of the chart total (so, the values of the dimensions are added, and the sum of them if expressed as a percentage of the sum of all dimensions)
+                        unaligned to prevent netdata from aligning the charts (e.g. when requesting 60 seconds aggregation per point, netdata returns chart data aligned to XX:XX:00 to XX:XX:59 - similarly for hours, days, etc - the unaligned option disables this feature)
+                        match-ids or match-names is used to control what data-dimensions= will match.
+                -->
+            </div>
+
+            <div data-netdata="net_drops.enp3s0f0"
+                 data-dimensions="inbound"
+                 data-width="450px"
+                 data-height="150px"
+                 data-after="-300"
+                 data-before="0"
+                 data-legend="no"
+                 data-append-options="absolute"
+                 data-chart-library="dygraph"
+                 data-colors="#3366CC"
+                 data-dygraph-strokeWidth="1.5"
+                 data-dygraph-type="line"
+
+            ></div>
+        </div>
+
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="cpu.cpu0"
+                 data-dygraph-valuerange="[0, 100]"
+                 data-common-min="utilization/cpu.cpu/percentage"
+                 data-common-max="utilization/cpu.cpu/percentage"
+                 data-width="450px"
+                 data-height="140px"
+                 data-after="-300"
+                 data-before="0"
+                 data-legend="yes"
+            ></div>
+
+            <div data-netdata="cpu.cpu8"
+                 data-dygraph-valuerange="[0, 100]"
+                 data-common-min="utilization/cpu.cpu/percentage"
+                 data-common-max="utilization/cpu.cpu/percentage"
+                 data-width="450px"
+                 data-height="140px"
+                 data-after="-300"
+                 data-before="0"
+                 data-legend="yes"
+            ></div>
+        </div>
+
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="cpu.cpu1"
+                 data-dygraph-valuerange="[0, 100]"
+                 data-common-min="utilization/cpu.cpu/percentage"
+                 data-common-max="utilization/cpu.cpu/percentage"
+                 data-width="450px"
+                 data-height="140px"
+                 data-after="-300"
+                 data-before="0"
+                 data-legend="yes"
+            ></div>
+            <div data-netdata="cpu.cpu9"
+                 data-dygraph-valuerange="[0, 100]"
+                 data-common-min="utilization/cpu.cpu/percentage"
+                 data-common-max="utilization/cpu.cpu/percentage"
+                 data-width="450px"
+                 data-height="140px"
+                 data-after="-300"
+                 data-before="0"
+                 data-legend="yes"
+            ></div>
+        </div>
+
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="cpu.cpu2"
+                 data-dygraph-valuerange="[0, 100]"
+                 data-common-min="utilization/cpu.cpu/percentage"
+                 data-common-max="utilization/cpu.cpu/percentage"
+                 data-width="450px"
+                 data-height="140px"
+                 data-after="-300"
+                 data-before="0"
+                 data-legend="yes"
+            ></div>
+            <div data-netdata="cpu.cpu10"
+                 data-dygraph-valuerange="[0, 100]"
+                 data-common-min="utilization/cpu.cpu/percentage"
+                 data-common-max="utilization/cpu.cpu/percentage"
+                 data-width="450px"
+                 data-height="140px"
+                 data-after="-300"
+                 data-before="0"
+                 data-legend="yes"
+            ></div>
+        </div>
+
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="cpu.cpu3"
+                 data-dygraph-valuerange="[0, 100]"
+                 data-common-min="utilization/cpu.cpu/percentage"
+                 data-common-max="utilization/cpu.cpu/percentage"
+                 data-width="450px"
+                 data-height="140px"
+                 data-after="-300"
+                 data-before="0"
+                 data-legend="yes"
+            ></div>
+            <div data-netdata="cpu.cpu11"
+                 data-dygraph-valuerange="[0, 100]"
+                 data-common-min="utilization/cpu.cpu/percentage"
+                 data-common-max="utilization/cpu.cpu/percentage"
+                 data-width="450px"
+                 data-height="140px"
+                 data-after="-300"
+                 data-before="0"
+                 data-legend="yes"
+            ></div>
+        </div>
+
+        <!--       SOFT NET     -->
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="cpu.cpu0_softnet_stat"
+                 data-chart-library="dygraph"
+                 data-width="450px"
+                 data-height="140px"
+                 data-after="-300"
+                 data-before="0"
+                 data-legend="yes"
+            ></div>
+            <div data-netdata="cpu.cpu2_softnet_stat"
+                 data-chart-library="dygraph"
+                 data-width="450px"
+                 data-height="140px"
+                 data-after="-300"
+                 data-before="0"
+                 data-legend="yes"
+            ></div>
+        </div>
+        <div style="height:10px;"></div>
+        <div>
+            <div data-netdata="cpu.cpu1_softnet_stat"
+                 data-chart-library="dygraph"
+                 data-width="450px"
+                 data-height="140px"
+                 data-after="-300"
+                 data-before="0"
+                 data-legend="yes"
+            ></div>
+            <div data-netdata="cpu.cpu3_softnet_stat"
+                 data-chart-library="dygraph"
+                 data-width="450px"
+                 data-height="140px"
+                 data-after="-300"
+                 data-before="0"
+                 data-legend="yes"
+            ></div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

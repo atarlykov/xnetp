@@ -1,0 +1,4 @@
+jparameters=""
+jparameters="$jparameters -Djava.library.path=.:../main/native/libxnetprs:../main/native/libscheda"
+jparameters="$jparameters -classpath ../../lib/jctools-core-2.1.2.jar:../../build/classes/java/main"
+

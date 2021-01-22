@@ -1,0 +1,11 @@
+
+address=`ip route | grep src | cut -d' ' -f9`
+mparameters=""
+mparameters="$mparameters -Djava.rmi.server.hostname=$address"
+mparameters="$mparameters -Dcom.sun.management.jmxremote"
+mparameters="$mparameters -Dcom.sun.management.jmxremote.port=9010"
+mparameters="$mparameters -Dcom.sun.management.jmxremote.authenticate=false"
+mparameters="$mparameters -Dcom.sun.management.jmxremote.ssl=false"
+
+
+

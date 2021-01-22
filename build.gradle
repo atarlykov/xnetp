@@ -1,0 +1,132 @@
+/**
+ *
+ */
+
+plugins {
+    // Apply the java plugin to add support for Java
+    id 'java'
+    
+    // Apply the application plugin to add support for building a CLI application
+    id 'application'
+}
+
+repositories {
+    // Use jcenter for resolving dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+dependencies {
+    // This dependency is used by the application.
+    // implementation 'com.google.guava:guava:27.1-jre'
+
+    // Use JUnit test framework
+    // testImplementation 'junit:junit:4.12'
+    compile fileTree(dir: 'lib', include: '*.jar')
+}
+
+application {
+    // Define the main class for the application
+    mainClassName = 'xx'
+
+    sourceCompatibility = 1.9
+    targetCompatibility = 1.9
+}
+
+
+// calls packet sender
+// type:JavaExec to catch "--args" parameters
+task sender(type:JavaExec) {
+    // this code is executed in "configuration" phase
+    dependsOn compileJava      // should recompile changes
+    finalizedBy run            // "run" will be called after us
+    
+    doFirst {
+        // this code is executed in "run?" phase.
+        // setup "run" task with new parameters, not from app
+        run.main = 'xnetp.poc.net.PacketSender'
+        run.systemProperty 'java.library.path', './src/main/native/libxnetprs:./src/main/native/libsheda'
+        run.args = args
+    }
+}
+
+// calls packet receiver
+// type:JavaExec to catch "--args" parameters
+task receiver(type:JavaExec) {
+    // this code is executed in "configuration" phase
+    dependsOn compileJava      // should recompile changes
+    finalizedBy run            // "run" will be called after us
+
+    doFirst {
+        // this code is executed in "run?" phase.
+        // setup "run" task with new parameters, not from app
+        run.main = 'xnetp.poc.net.PacketReceiver'
+        run.systemProperty 'java.library.path', './src/main/native/libxnetprs:./src/main/native/libsheda'
+        run.args = args
+    }
+}
+
+
+// calls 
+task disk_create_folders(type:JavaExec) {
+    dependsOn compileJava
+    finalizedBy run
+
+    doFirst {
+        run.main = 'xnetp.poc.disk.XXX'
+        run.args = args
+    }
+}
+
+
+task nfmodule_clean(type:Exec) {
+    workingDir './src/nfmodule'
+    commandLine 'make', 'clean'
+}
+
+task nfmodule_make(type:Exec) {
+    dependsOn nfmodule_clean
+    workingDir './src/nfmodule'
+    commandLine 'make'
+}
+
+task libxnetprs_clean(type:Exec) {
+  workingDir './src/main/native/libxnetprs'
+  environment JDK_HOME: System.properties.'java.home'
+  commandLine 'make', 'clean'
+}
+
+task libxnetprs_make(type:Exec) {
+  dependsOn libxnetprs_clean
+  workingDir './src/main/native/libxnetprs'
+  environment JDK_HOME: System.properties.'java.home'
+  commandLine 'make'
+}
+
+
+task libnetrxring_clean(type:Exec) {
+  workingDir './src/main/native/libnetrxring'
+  environment JDK_HOME: System.properties.'java.home'
+  commandLine 'make', 'clean'
+}
+
+task libnetrxring_make(type:Exec) {
+  dependsOn libnetrxring_clean
+  workingDir './src/main/native/libnetrxring'
+  environment JDK_HOME: System.properties.'java.home'
+  commandLine 'make'
+}
+
+
+task libscheda_clean(type:Exec) {
+    workingDir './src/main/native/libscheda'
+    environment JDK_HOME: System.properties.'java.home'
+    commandLine 'make', 'clean'
+}
+
+task libscheda_make(type:Exec) {
+    dependsOn libscheda_clean
+    workingDir './src/main/native/libscheda'
+    environment JDK_HOME: System.properties.'java.home'
+    commandLine 'make'
+}

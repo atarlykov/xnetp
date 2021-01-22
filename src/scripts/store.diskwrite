@@ -1,0 +1,3 @@
+# runs direct disk write test
+source ./parameters
+java $jparameters xnetp.poc.disk.DirectDiskWriter $@
